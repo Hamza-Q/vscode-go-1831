@@ -6,14 +6,16 @@ import (
 	"github.com/stretchr/testify/suite"
 )
 
+var version string
+
 func TestSuite(t *testing.T) {
-	s := new(dummySuite)
-	suite.Run(t, s)
+	suite.Run(t, new(exampleSuite))
 }
 
-type dummySuite struct {
+type exampleSuite struct {
 	suite.Suite
 }
 
-func (dummySuite) TestNothing() {
+func (s *exampleSuite) TestLDFLAGS() {
+	s.Require().NotEmpty(version, "expected 'version' to be set by ldflags but it was empty!")
 }
