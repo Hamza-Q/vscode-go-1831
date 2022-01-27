@@ -1,4 +1,5 @@
 #!/bin/bash
+set -v
 set -x
 
 PKG=github.com/Hamza-Q/vscode-go-1831
