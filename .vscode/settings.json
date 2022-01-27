@@ -1,6 +1,6 @@
 {
-    "go.buildFlags": [
-        "-ldflags=-X github.com/Hamza-Q/vscode-go-1831.version=12345"
+    "go.testFlags": [
+        "-ldflags",
+        "-X=github.com/Hamza-Q/vscode-go-1831.version=12345",
     ],
-    "go.useLanguageServer": true,
 }

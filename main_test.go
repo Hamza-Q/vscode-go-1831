@@ -1,6 +1,8 @@
 package main
 
 import (
+	"flag"
+	"os"
 	"testing"
 
 	"github.com/stretchr/testify/suite"
@@ -9,7 +11,15 @@ import (
 var version string
 
 func TestSuite(t *testing.T) {
+	printArgs(t)
 	suite.Run(t, new(exampleSuite))
+}
+
+func printArgs(t *testing.T) {
+	t.Log("os.Args:")
+	t.Log(os.Args)
+	t.Log("flag.Args():")
+	t.Log(flag.Args())
 }
 
 type exampleSuite struct {
